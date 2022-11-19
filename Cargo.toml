@@ -1,0 +1,23 @@
+[package]
+name = "fin-part-ord"
+version = "0.0.0"
+edition = "2021"
+description = "Datatype for finite partial orders"
+keywords = ["datatype", "finite", "partial-order", "ordering"]
+authors = ["Langston Barrett <langston.barrett@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/langston-barrett/fin-part-ord"
+repository = "https://github.com/langston-barrett/fin-part-ord"
+
+[dev-dependencies]
+quickcheck = "1"
+
+[features]
+default = ["dag", "pairs"]
+dag = ["dep:daggy", "dep:petgraph"]
+pairs = []
+
+[dependencies]
+daggy = { optional = true, version = "0.8" }
+petgraph = { optional = true, version = "0.6" }
