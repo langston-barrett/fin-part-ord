@@ -1,3 +1,4 @@
+///! DAG-based implementation of [`FinPartOrd`].
 use std::collections::HashMap;
 use std::hash::Hash;
 
@@ -134,7 +135,6 @@ mod tests {
             }
             let mut ppo = DagPartOrd::empty();
             ppo = ppo.add(&x, &y).unwrap();
-            println!("{:?}", ppo);
             ppo.add(&y, &x).is_err()
         }
 
