@@ -20,7 +20,7 @@ where
 
     /// Check if one element is less than another.
     ///
-    /// May return `true` when `lo == hi`, even if that element hasn't been
+    /// May return `false` when `lo == hi`, even if that element hasn't been
     /// explicitly added.
     fn lt(&self, lo: &T, hi: &T) -> Result<bool, Self::Error>;
 
