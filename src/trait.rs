@@ -1,10 +1,12 @@
+/// Trait for finite partial orders.
+///
 /// Laws:
 ///
 /// - Reflexivity: `self.le(x, x) == true`
 /// - Antisymmetry: `self.le(x, y) && self.le(y, x) ==> x == y`
 /// - Transitivity: `self.le(x, y) && self.le(y, z) ==> self.le(x, z)`
 /// - Compatibility: `self.le(x, y) <==> x == y || self.lt(x, y)`
-/// - Add/less: `{ self.add(x, y); self.le(x, y) } == true`
+/// - Add/less: `self.add(x, y).le(x, y) == true`
 pub trait FinPartOrd<T>
 where
     Self: Sized,
